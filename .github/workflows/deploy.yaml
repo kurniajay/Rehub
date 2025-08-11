@@ -21,7 +21,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Sync to S3
-        run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --delete
+        run: aws s3 sync . s3://rehub-website --delete
 
       # Deploy to EC2
       - name: Copy to EC2
